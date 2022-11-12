@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":"ture","version":"8.13.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="0. 前言dmy 讲课时讲了一个看起来很牛马牛逼的东西，但是他讲的太拉了我太菜了，所以去查了些资料才搞懂一点 然鹅……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="拟阵学习笔记">
+<meta property="og:url" content="http://example.com/2022/11/11/%E6%8B%9F%E9%98%B5%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="一个有机物的博客">
+<meta property="og:description" content="0. 前言dmy 讲课时讲了一个看起来很牛马牛逼的东西，但是他讲的太拉了我太菜了，所以去查了些资料才搞懂一点 然鹅……">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/qjhxckt8.png">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/oorkchak.png?x-oss-process=image/resize,m_lfit,h_170,w_225">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/qaf06g5e.png">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/idihu39h.png?x-oss-process=image/resize,m_lfit,h_170,w_225">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/dtsbz9rv.png?x-oss-process=image/resize,m_lfit,h_170,w_225">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/qtmu0j2f.png?x-oss-process=image/resize,m_lfit,h_170,w_225">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/z3feeqf6.png">
+<meta property="article:published_time" content="2022-11-11T13:20:39.000Z">
+<meta property="article:modified_time" content="2022-11-12T10:26:07.334Z">
+<meta property="article:author" content="C6H14">
+<meta property="article:tag" content="拟阵">
+<meta property="article:tag" content="组合数学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/image_hosting/qjhxckt8.png">
+
+
+<link rel="canonical" href="http://example.com/2022/11/11/%E6%8B%9F%E9%98%B5%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/11/11/%E6%8B%9F%E9%98%B5%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/","path":"2022/11/11/拟阵学习笔记/","title":"拟阵学习笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>拟阵学习笔记 | 一个有机物的博客</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">一个有机物的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">0. 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%8B%9F%E9%98%B5%E6%A6%82%E5%BF%B5"><span class="nav-number">2.</span> <span class="nav-text">1. 拟阵概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%8B%AC%E7%AB%8B%E9%9B%86%E4%B8%8E%E6%8B%9F%E9%98%B5%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">2. 独立集与拟阵最优化问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%8B%9F%E9%98%B5%E4%BA%A4"><span class="nav-number">4.</span> <span class="nav-text">3. 拟阵交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E4%B8%80%E4%BA%9B%E4%BE%8B%E5%AD%90"><span class="nav-number">5.</span> <span class="nav-text">5. 一些例子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%89%A9%E5%B1%95%E9%98%85%E8%AF%BB"><span class="nav-number">6.</span> <span class="nav-text">5. 扩展阅读</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">C6H14</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/11/%E6%8B%9F%E9%98%B5%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="C6H14">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一个有机物的博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="拟阵学习笔记 | 一个有机物的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          拟阵学习笔记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-11-11 21:20:39" itemprop="dateCreated datePublished" datetime="2022-11-11T21:20:39+08:00">2022-11-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-12 18:26:07" itemprop="dateModified" datetime="2022-11-12T18:26:07+08:00">2022-11-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>dmy 讲课时讲了一个看起来很<del>牛马</del>牛逼的东西，但是<del>他讲的太拉了</del>我太菜了，所以去查了些资料才搞懂一点</p>
+<p>然鹅……</p>
+<span id="more"></span>
+
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/qjhxckt8.png"></p>
+<p><del>所以我这个蓝名学这个干什么</del></p>
+<p>由于我比较菜，可能写的会有一些错误的地方，望各位大佬指正</p>
+<h2 id="1-拟阵概念"><a href="#1-拟阵概念" class="headerlink" title="1. 拟阵概念"></a>1. 拟阵概念</h2><p>拟阵是一个很强大的模型，可以解决一大坨组合最优问题，学会了它你可以<del>吊打 tourist</del></p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/oorkchak.png?x-oss-process=image/resize,m_lfit,h_170,w_225"></p>
+<p>那么什么是拟阵呢？</p>
+<p>假设我们现在有一个有限集 $M$，我们可以将它的所有子集和包含关系用一张 DAG 表示，其中每个点代表一个集合，每条边表示一个包含关系</p>
+<p>为简化这个 DAG，我们忽略那些集合大小差大于 $1$ 的包含关系与它们该连的边</p>
+<p>比如有限集 ${ 1,2,3 }$ 可以用下面这张图表示：</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/qaf06g5e.png"></p>
+<p>以后我们称两个集合一个比另一个大当且仅当它们的集合大小一个比另一个大</p>
+<p>现在我们想选出其中几个子集，用它们组成一个新的集合 $S$（也叫 $S$ 为 $M$ 的子集族），$S$ 必须满足下面两个性质：</p>
+<ul>
+<li>（遗传性）每个在 $S$ 中的集合，它的所有子集都在 $S$ 中（$\forall A \in S,B \subset A,B \in A$）</li>
+</ul>
+<p>也就是在上面那张由 $M$ 生成的 DAG 中，任选一个点 $A$ 代表的集合加入到 $S$ 中，必须同时将所有 $A$ 能到达的点 $B$ 代表的集合加入到 $S$ 中</p>
+<ul>
+<li>（交换性）只要 $A$ 包含的元素个数不是在 $S$ 里的集合最大的，必定可以在 $S$ 中找到一个恰好比 $A$ 多一个元素的集合 $B$（$\forall A,B \in S \land |A|&lt;|B|,\exists a \in M,a \notin A,A \cup {a} \in S$）</li>
+</ul>
+<p>也就是将上面的 DAG 结点保留在 $S$ 中集合代表的结点以及它们之间的边，按照代表集合大小排序后，除了在 $S$ 中最大的那几个外，其他在 $S$ 中的集合代表的结点入度必定不为 $0$</p>
+<p>满足这两个性质的集合 $S$ 与原来的集合 $M$ 构成的二元组 $(M,S)$ 就称为<strong>拟阵</strong></p>
+<p>这样我们可以把拟阵对应为原来那张 DAG 上的一个子图，满足所有源点代表集合大小相等且源点在原来的图上能到达的结点都在这个子图中</p>
+<p>来个例子：</p>
+<p>比如 $S&#x3D;{ {1,2},{2,3},{1},{2},{3},\emptyset }$，$(M,S)$ 就是拟阵，它满足上面的所有定义（不信你验证一下）</p>
+<p>但是 $S&#x3D;{ {1,2},{2,3},{1},{2},\emptyset }$，$(M,S)$ 就不是拟阵，因为 ${ 2,3 }$ 的子集 ${ 3 }$ 并不在 $S$ 中</p>
+<p>再举个例子：</p>
+<p>假设 $M$ 为一张无向图上的边集，$S$ 为其中不构成环的 $M$ 的子集，$(M,S)$ 也是一个拟阵，其中的极大独立集就是生成树</p>
+<p>一个感性的理解：</p>
+<p>我们随便取出一个不是生成树的边集，必定可以再找到一条边，连接两个连通块，这样的边肯定不构成环；随便选出一个不构成环的边集，随便删掉一条肯定也不会出现环</p>
+<p>说到这你可能就发现了，有关生成树的最优化问题可以尝试转化为拟阵！</p>
+<p>然鹅我们还不知道怎么求解有关拟阵的最优问题（我们甚至没定义拟阵上的最优概念），于是有了独立集的概念</p>
+<h2 id="2-独立集与拟阵最优化问题"><a href="#2-独立集与拟阵最优化问题" class="headerlink" title="2. 独立集与拟阵最优化问题"></a>2. 独立集与拟阵最优化问题</h2><p>我们现在的目标是尝试将一些特殊的最优化问题转化为拟阵上的最优化问题并解决它</p>
+<p>首先我们要对 $M$ 中的每个元素分配一个权值 $w_i$<br>，这里 $w_i \geqslant 0$，并定义 $S$ 中一个集合的权值为其中所有元素的权值和</p>
+<p>这样拟阵上的最优化问题就可以转化找到为 $S$ 中 $\sum w_i$ 最大的集合</p>
+<p>怎么找到这个集合呢？<del>暴力</del></p>
+<p>我们需要引入一个新的概念：<strong>独立集</strong></p>
+<p>只要集合 $s$ 在拟阵的 $S$ 中，我们就称 $s$ 为独立集</p>
+<p>你或许会想：这不新瓶装旧酒吗？你**骗我是吧</p>
+<p>别急，还有其他概念：</p>
+<ul>
+<li>若 $\exists x \in M,x \notin A,A \cup {x } \in S$，称 $A$ 为可拓展的；否则称 $A$ 为极大独立集</li>
+</ul>
+<p>考虑 $M$ 对应的 DAG，我们已经知道 $S$ 可以对应一张子图，那么极大独立集就对应其中的源点，其他集合对应其他的点</p>
+<p>还是拿 $S&#x3D;{ {1,2},{2,3},{1},{2},{3},\emptyset }$ 举例，${1,2}$ 和 ${2,3}$ 就是极大独立集，其他集合都是可拓展的</p>
+<p>显然同一拟阵中极大独立集的大小都相等</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/idihu39h.png?x-oss-process=image/resize,m_lfit,h_170,w_225"></p>
+<ul>
+<li>假如 $A \in S$ 的权值是 $S$ 中最大的，我们称 $A$ 为权值极大独立集</li>
+</ul>
+<p>显然权值极大独立集一定是极大独立集</p>
+<p>求解权值极大独立集可以用贪心解决（<del>虽说 dmy 讲课时说应该是贪心可以用权值极大独立集解决</del>）：</p>
+<ol>
+<li><p>将 $M$ 中的元素按照 $w_i$ 从大到小排序</p>
+</li>
+<li><p>维护权值极大独立集 $I$，初始化 $I &#x3D; \emptyset$</p>
+</li>
+<li><p>枚举 $M$ 中元素 $x$，只要 ${ x } \cup I$ 仍然为独立集就将 $x$ 加入 $I$</p>
+</li>
+</ol>
+<p><del>上课写的狗屎板子：</del></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">sort</span>(a+<span class="number">1</span>,a+<span class="number">1</span>+n,cmp);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=n;i&gt;=<span class="number">1</span>;--i)</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">check</span>(a[i]))</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">add</span>(a[i]);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p>来个例题：求最小生成树权值和</p>
+<p>直接让 $M$ 为边集，$S$ 为不构成环的边集的子集族，$w_i$ 为边权大小相反数即可……吗？</p>
+<p>要求 $w_i \geqslant 0$，还写个屁</p>
+<p>那么我们让 $w_i$ 为一个非常大的数减去边权行不行呢？</p>
+<p>由于权值极大独立集元素个数是固定的（或者说边数是固定的），这样处理对答案的改变只与点数有关，所以是正确的！</p>
+<p><del>别忙着发题解</del>，你会发现这个算法已经有了个名字：Kruskal</p>
+<p>是的，我们得到了一个新的 Kruskal 的证明方法</p>
+<hr>
+<p>再来个例题：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3265">魔法商店 </a></p>
+<p>题意：给你 $n$ 个 $m$ 维向量，选第 $i$ 个向量花费为 $c_i$，要求选出一个极大线性无关组，且花费最小（$n,m \leqslant 500,c_i \leqslant 1000$）</p>
+<p>直接令 $M&#x3D; { z_i}$，$S$ 为 $M$ 中所有线性无关组的大集合，线性代数常识告诉我们这玩意满足遗传性和交换性，那么 $(M,S)$ 是一个拟阵！</p>
+<p>既然是个拟阵，就可以维护极大独立集了，这个比较简单，用类似线性基的方式将 $z_i$ 高斯消元后逐个插入基中，插入前判断一下是不是线性无关的就行了，代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">long</span> <span class="type">double</span> eps=<span class="number">0.0001</span>;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">equip</span></span><br><span class="line">&#123;</span><br><span class="line">	ll c;</span><br><span class="line">	<span class="type">long</span> <span class="type">double</span> z[<span class="number">505</span>];</span><br><span class="line">	<span class="type">bool</span> <span class="keyword">operator</span> &lt;(<span class="type">const</span> equip &amp;x) <span class="type">const</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> c&lt;x.c;</span><br><span class="line">	&#125;</span><br><span class="line">&#125; a[<span class="number">505</span>];</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(equip )</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ins</span><span class="params">(equip )</span></span>;</span><br><span class="line">ll n,ans,m,l;</span><br><span class="line"><span class="type">bool</span> here[<span class="number">505</span>];</span><br><span class="line"><span class="type">long</span> <span class="type">double</span> b[<span class="number">505</span>][<span class="number">505</span>],o=<span class="number">1.0</span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n=<span class="built_in">read</span>(),m=<span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;++j)</span><br><span class="line">			a[i].z[j]=<span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">		a[i].c=<span class="built_in">read</span>();</span><br><span class="line">	<span class="built_in">sort</span>(a+<span class="number">1</span>,a+<span class="number">1</span>+n);</span><br><span class="line">	<span class="built_in">ins</span>(a[<span class="number">1</span>]);</span><br><span class="line">	ans+=a[<span class="number">1</span>].c;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">check</span>(a[i]))</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		ans+=a[i].c;</span><br><span class="line">		<span class="built_in">ins</span>(a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;++i)</span><br><span class="line">		<span class="keyword">if</span> (here[i])</span><br><span class="line">			++l;</span><br><span class="line">	<span class="built_in">write</span>(l,<span class="string">&#x27; &#x27;</span>),<span class="built_in">write</span>(ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(equip x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;++i)</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">fabs</span>(x.z[i])&gt;eps)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (!here[i])</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">			<span class="type">long</span> <span class="type">double</span> tmp=x.z[i]/b[i][i];</span><br><span class="line">			x.z[i]=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j=i+<span class="number">1</span>;j&lt;=m;++j)</span><br><span class="line">				x.z[j]-=tmp*b[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ins</span><span class="params">(equip x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;++i)</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">fabs</span>(x.z[i])&gt;eps)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (!here[i])</span><br><span class="line">			&#123;</span><br><span class="line">				here[i]=<span class="number">1</span>;</span><br><span class="line">				<span class="keyword">for</span> (<span class="type">int</span> j=i;j&lt;=m;++j)</span><br><span class="line">					b[i][j]=x.z[j];</span><br><span class="line">				<span class="keyword">return</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="type">long</span> <span class="type">double</span> tmp=x.z[i]/b[i][i];</span><br><span class="line">			x.z[i]=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j=i+<span class="number">1</span>;j&lt;=m;++j)</span><br><span class="line">				x.z[j]-=tmp*b[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>拟阵的功能远不止这些，在 2018 年国家集训队论文中杨乾澜大神介绍了拟阵的一个更<del>牛马</del>牛逼的扩展：<strong>拟阵交</strong></p>
+<h2 id="3-拟阵交"><a href="#3-拟阵交" class="headerlink" title="3. 拟阵交"></a>3. 拟阵交</h2><p>假设有两个拟阵 $(M,S)$ 和 $(M,T)$，我们称它们的拟阵交为 $S \cap T$</p>
+<p>有些问题要求最优化的答案有多个性质，只看单独某个性质都可以转为拟阵最优化问题，凑一坨却不好做</p>
+<p>这时我们可以把每一个性质都抽象成一个拟阵，最后的答案即为拟阵交</p>
+<p>然鹅大部分这样的问题都不好做，原因在于：</p>
+<p><strong>拟阵交不一定是拟阵</strong></p>
+<p>更令人悲观的是，大于等于三个拟阵交问题是 NP-Hard 的，可以规约到哈密顿路径</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/dtsbz9rv.png?x-oss-process=image/resize,m_lfit,h_170,w_225"></p>
+<p>虽然但是，两个拟阵的交是有多项式算法的（怎么这么像 2-SAT 呢），我们下面就来介绍：</p>
+<p>介绍一个新的图：**交换图 $G_{S,T}(I)$**，$I$ 为某个集合</p>
+<p>交换图是一个有向二分图，可以认为左部是 $I$ 中的元素对应的点，右部是 $\complement_M I$ </p>
+<p>这个图的点为 $M$ 中的元素</p>
+<p>我们需要一个新的布尔数组 $vis$，用于记录 $M$ 中的某个元素是否在左部</p>
+<p>我们现在进行连边：</p>
+<p>取出左部一个点 $x$ 和右部一个点 $y$，记将 $x$ 与 $y$ 对调后左部为 $I’$，也就是 $I’&#x3D;(I-{ x }) \cup { y }$</p>
+<ul>
+<li><p>若 $I’ \in S$，连一条 $x$ 到 $y$ 的有向边，边权为 $(-1)^{vis_i}w_y$</p>
+</li>
+<li><p>若 $I’ \in T$，连一条 $y$ 到 $x$ 的有向边，边权为 $(-1)^{vis_i}w_x$</p>
+</li>
+</ul>
+<p>再来张图，我们令 $S&#x3D;{ {1,2},{1 },{ 2 },\emptyset }$，$T&#x3D;{ {2,3},{2 },{ 3 },\emptyset }$，$M &#x3D; {1,2,3}$，$I&#x3D;{ 1,2}$，交换图就是：</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/qtmu0j2f.png?x-oss-process=image/resize,m_lfit,h_170,w_225"></p>
+<p>现在我们来求拟阵交，使用增广法：</p>
+<ol>
+<li><p>初始化 $I&#x3D; \emptyset$，并建立两个新结点 $s,t$</p>
+</li>
+<li><p>建立交换图 $G_{S,T}(I)$</p>
+</li>
+<li><p>找到右部所有加入 $I$ 仍使 $I \in S$ 的点，记作 $X_1$</p>
+</li>
+<li><p>找到右部所有加入 $I$ 仍使 $I \in T$ 的点，记作 $X_2$</p>
+</li>
+<li><p>将 $s$ 与 $X_1$ 的所有结点连一条边权为 $0$ 有向边，$X_2$ 的所有结点与 $t$ 连一条边权为 $0$ 的有向边</p>
+</li>
+<li><p>求 $s$ 到 $t$ 的最短路，距离相同优先选择经过边数少的，可以用<del>诈尸的</del> SPFA</p>
+</li>
+<li><p>假如存在最短路，将这条最短路上的所有元素的 $vis_i$ 变成 $!vis_i$，然后回到操作 2 循环</p>
+</li>
+<li><p>假如不存在最短路，结束循环，$I$ 即为所有 $vis_i&#x3D;1$ 的元素（除了 $s,t$ 外）</p>
+</li>
+</ol>
+<p>好像复杂度不超过$O(|I|^2n)$？（毕竟我还在学习……）</p>
+<h2 id="5-一些例子"><a href="#5-一些例子" class="headerlink" title="5. 一些例子"></a>5. 一些例子</h2><p>例1：给你一个 $n$ 个点 $m$ 条边的无向图，再给你 $n-1$ 个边集 $A_1,A_2\ldots A_{n-1}$，请构造一个方案，从每个边集选一条边后能凑出一个生成树，$n,m \leqslant 200$</p>
+<p>令 $S$ 为不构成环的边集族，$T$ 为每个边集至多选一条边的边集族，<del>感性理解</del> $(E,S)$ 和 $(E,T)$ 都是拟阵，求拟阵交就行</p>
+<p>例2：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/CF1556H">CF1556H</a></p>
+<p>给你一个 $n$ 个点的无向完全图，边权给定，求前 $k$ 个点中第 $i$ 个点的度数不超过 $d_i$ 的最小生成树的边权和，$n \leqslant 50$，$k \leqslant 5$</p>
+<p>这个题复杂一点：</p>
+<p>首先，$S$ 显然是不构成环的边集组成的拟阵</p>
+<p>那么 $T$ 是什么呢？</p>
+<p>如果你想将前 $k$ 个点都满足限制当做 $T$，你就 gg 了</p>
+<p>考虑这样一个情况（度数限制为 $1$）：</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/z3feeqf6.png"></p>
+<p>这个情况中，$T$ 应该是 ${ {(1,2),(3,4)},{(1,2)},{(2,3)},{(3,4)},\emptyset }$</p>
+<p>${(2,3)}$ 不是最大的元素，但是没有比它恰好多一个元素的集合了，这根本不是拟阵，<del>那还写个屁</del></p>
+<p>你要是想将每个度数限制单独搞一个拟阵，再求拟阵交，<del>你就是图灵奖得主，名垂千古</del></p>
+<p><del>dmy 少讲了拟阵交不是拟阵，结果被我胡了一个NP-Hard</del></p>
+<p>发现我们没法把前 $k$ 个点都满足限制当做拟阵，原因在于这些点之间的连边对度数限制的消耗与其他边对度数限制的消耗不同</p>
+<p>那么我们枚举这个子图的连边状态不就解决了吗？</p>
+<p>然后就是个简单的拟阵交了，用冰茶几维护 $S$，暴力更新 $T$，两个结构体搞定，<del>复杂度 O(能过)</del></p>
+<p><del>然鹅这个沙比写的代码常数巨大无比，别人代码 3s 过的第 8 个点这个沙比要 9s</del></p>
+<h2 id="5-扩展阅读"><a href="#5-扩展阅读" class="headerlink" title="5. 扩展阅读"></a>5. 扩展阅读</h2><ul>
+<li><p>杨乾澜《浅谈拟阵的一些拓展及其应用》</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/54713563">《拟阵及应用（四）》</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/cpp/ni-zhen-yu-zui-you-hua-wen-ti">学无止境的日报《拟阵与最优化问题》</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zght/p/15196754.html">zghtyarecrenj《从拟阵基础到 Shannon 开关游戏》</a></p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8B%9F%E9%98%B5/" rel="tag"># 拟阵</a>
+              <a href="/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" rel="tag"># 组合数学</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/11/11/hello-world/" rel="prev" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/11/12/22-11-%E6%A8%A1%E6%8B%9F%E8%B5%9B%E5%90%88%E9%9B%86/" rel="next" title="22.11 模拟赛合集">
+                  22.11 模拟赛合集 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">C6H14</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
