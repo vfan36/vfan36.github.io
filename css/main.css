@@ -2436,6 +2436,13 @@ ul.breadcrumb li:last-child {
     color: #eee;
   }
 }
+mjx-container[jax='CHTML'][display='true'],
+.has-jax {
+  overflow: auto hidden;
+}
+mjx-container[display='true'] + br {
+  display: none;
+}
 .use-motion .animated {
   animation-fill-mode: none;
   visibility: inherit;
@@ -2614,7 +2621,7 @@ ul.breadcrumb li:last-child {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #bd7a8a;
+  background: #ff1f5b;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);

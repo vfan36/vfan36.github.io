@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/qtmu0j2f.png?x-oss-process=image/resize,m_lfit,h_170,w_225">
 <meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/z3feeqf6.png">
 <meta property="article:published_time" content="2022-11-11T13:20:39.000Z">
-<meta property="article:modified_time" content="2022-11-12T10:26:07.334Z">
+<meta property="article:modified_time" content="2022-11-13T11:26:44.819Z">
 <meta property="article:author" content="C6H14">
 <meta property="article:tag" content="拟阵">
 <meta property="article:tag" content="组合数学">
@@ -137,18 +137,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -211,7 +211,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-12 18:26:07" itemprop="dateModified" datetime="2022-11-12T18:26:07+08:00">2022-11-12</time>
+      <time title="修改时间：2022-11-13 19:26:44" itemprop="dateModified" datetime="2022-11-13T19:26:44+08:00">2022-11-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -240,17 +240,16 @@
         <h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>dmy 讲课时讲了一个看起来很<del>牛马</del>牛逼的东西，但是<del>他讲的太拉了</del>我太菜了，所以去查了些资料才搞懂一点</p>
 <p>然鹅……</p>
 <span id="more"></span>
-
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/qjhxckt8.png"></p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/qjhxckt8.png" alt=""></p>
 <p><del>所以我这个蓝名学这个干什么</del></p>
 <p>由于我比较菜，可能写的会有一些错误的地方，望各位大佬指正</p>
 <h2 id="1-拟阵概念"><a href="#1-拟阵概念" class="headerlink" title="1. 拟阵概念"></a>1. 拟阵概念</h2><p>拟阵是一个很强大的模型，可以解决一大坨组合最优问题，学会了它你可以<del>吊打 tourist</del></p>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/oorkchak.png?x-oss-process=image/resize,m_lfit,h_170,w_225"></p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/oorkchak.png?x-oss-process=image/resize,m_lfit,h_170,w_225" alt=""></p>
 <p>那么什么是拟阵呢？</p>
 <p>假设我们现在有一个有限集 $M$，我们可以将它的所有子集和包含关系用一张 DAG 表示，其中每个点代表一个集合，每条边表示一个包含关系</p>
 <p>为简化这个 DAG，我们忽略那些集合大小差大于 $1$ 的包含关系与它们该连的边</p>
-<p>比如有限集 ${ 1,2,3 }$ 可以用下面这张图表示：</p>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/qaf06g5e.png"></p>
+<p>比如有限集 $\{ 1,2,3 \}$ 可以用下面这张图表示：</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/qaf06g5e.png" alt=""></p>
 <p>以后我们称两个集合一个比另一个大当且仅当它们的集合大小一个比另一个大</p>
 <p>现在我们想选出其中几个子集，用它们组成一个新的集合 $S$（也叫 $S$ 为 $M$ 的子集族），$S$ 必须满足下面两个性质：</p>
 <ul>
@@ -264,8 +263,8 @@
 <p>满足这两个性质的集合 $S$ 与原来的集合 $M$ 构成的二元组 $(M,S)$ 就称为<strong>拟阵</strong></p>
 <p>这样我们可以把拟阵对应为原来那张 DAG 上的一个子图，满足所有源点代表集合大小相等且源点在原来的图上能到达的结点都在这个子图中</p>
 <p>来个例子：</p>
-<p>比如 $S&#x3D;{ {1,2},{2,3},{1},{2},{3},\emptyset }$，$(M,S)$ 就是拟阵，它满足上面的所有定义（不信你验证一下）</p>
-<p>但是 $S&#x3D;{ {1,2},{2,3},{1},{2},\emptyset }$，$(M,S)$ 就不是拟阵，因为 ${ 2,3 }$ 的子集 ${ 3 }$ 并不在 $S$ 中</p>
+<p>比如 $S=\{ \{1,2\},\{2,3\},\{1\},\{2\},\{3\},\emptyset \}$，$(M,S)$ 就是拟阵，它满足上面的所有定义（不信你验证一下）</p>
+<p>但是 $S=\{ \{1,2\},\{2,3\},\{1\},\{2\},\emptyset \}$，$(M,S)$ 就不是拟阵，因为 $\{ 2,3 \}$ 的子集 $\{ 3 \}$ 并不在 $S$ 中</p>
 <p>再举个例子：</p>
 <p>假设 $M$ 为一张无向图上的边集，$S$ 为其中不构成环的 $M$ 的子集，$(M,S)$ 也是一个拟阵，其中的极大独立集就是生成树</p>
 <p>一个感性的理解：</p>
@@ -281,12 +280,12 @@
 <p>你或许会想：这不新瓶装旧酒吗？你**骗我是吧</p>
 <p>别急，还有其他概念：</p>
 <ul>
-<li>若 $\exists x \in M,x \notin A,A \cup {x } \in S$，称 $A$ 为可拓展的；否则称 $A$ 为极大独立集</li>
+<li>若 $\exists x \in M,x \notin A,A \cup \{x \} \in S$，称 $A$ 为可拓展的；否则称 $A$ 为极大独立集</li>
 </ul>
 <p>考虑 $M$ 对应的 DAG，我们已经知道 $S$ 可以对应一张子图，那么极大独立集就对应其中的源点，其他集合对应其他的点</p>
-<p>还是拿 $S&#x3D;{ {1,2},{2,3},{1},{2},{3},\emptyset }$ 举例，${1,2}$ 和 ${2,3}$ 就是极大独立集，其他集合都是可拓展的</p>
+<p>还是拿 $S=\{ \{1,2\},\{2,3\},\{1\},\{2\},\{3\},\emptyset \}$ 举例，$\{1,2\}$ 和 $\{2,3\}$ 就是极大独立集，其他集合都是可拓展的</p>
 <p>显然同一拟阵中极大独立集的大小都相等</p>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/idihu39h.png?x-oss-process=image/resize,m_lfit,h_170,w_225"></p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/idihu39h.png?x-oss-process=image/resize,m_lfit,h_170,w_225" alt=""></p>
 <ul>
 <li>假如 $A \in S$ 的权值是 $S$ 中最大的，我们称 $A$ 为权值极大独立集</li>
 </ul>
@@ -295,15 +294,13 @@
 <ol>
 <li><p>将 $M$ 中的元素按照 $w_i$ 从大到小排序</p>
 </li>
-<li><p>维护权值极大独立集 $I$，初始化 $I &#x3D; \emptyset$</p>
+<li><p>维护权值极大独立集 $I$，初始化 $I = \emptyset$</p>
 </li>
-<li><p>枚举 $M$ 中元素 $x$，只要 ${ x } \cup I$ 仍然为独立集就将 $x$ 加入 $I$</p>
+<li><p>枚举 $M$ 中元素 $x$，只要 $\{ x \} \cup I$ 仍然为独立集就将 $x$ 加入 $I$</p>
 </li>
 </ol>
 <p><del>上课写的狗屎板子：</del></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">sort</span>(a+<span class="number">1</span>,a+<span class="number">1</span>+n,cmp);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=n;i&gt;=<span class="number">1</span>;--i)</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">check</span>(a[i]))</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">add</span>(a[i]);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
 <hr>
 <p>来个例题：求最小生成树权值和</p>
 <p>直接让 $M$ 为边集，$S$ 为不构成环的边集的子集族，$w_i$ 为边权大小相反数即可……吗？</p>
@@ -315,11 +312,9 @@
 <hr>
 <p>再来个例题：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3265">魔法商店 </a></p>
 <p>题意：给你 $n$ 个 $m$ 维向量，选第 $i$ 个向量花费为 $c_i$，要求选出一个极大线性无关组，且花费最小（$n,m \leqslant 500,c_i \leqslant 1000$）</p>
-<p>直接令 $M&#x3D; { z_i}$，$S$ 为 $M$ 中所有线性无关组的大集合，线性代数常识告诉我们这玩意满足遗传性和交换性，那么 $(M,S)$ 是一个拟阵！</p>
+<p>直接令 $M= \{ z_i\}$，$S$ 为 $M$ 中所有线性无关组的大集合，线性代数常识告诉我们这玩意满足遗传性和交换性，那么 $(M,S)$ 是一个拟阵！</p>
 <p>既然是个拟阵，就可以维护极大独立集了，这个比较简单，用类似线性基的方式将 $z_i$ 高斯消元后逐个插入基中，插入前判断一下是不是线性无关的就行了，代码如下：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">long</span> <span class="type">double</span> eps=<span class="number">0.0001</span>;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">equip</span></span><br><span class="line">&#123;</span><br><span class="line">	ll c;</span><br><span class="line">	<span class="type">long</span> <span class="type">double</span> z[<span class="number">505</span>];</span><br><span class="line">	<span class="type">bool</span> <span class="keyword">operator</span> &lt;(<span class="type">const</span> equip &amp;x) <span class="type">const</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> c&lt;x.c;</span><br><span class="line">	&#125;</span><br><span class="line">&#125; a[<span class="number">505</span>];</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(equip )</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ins</span><span class="params">(equip )</span></span>;</span><br><span class="line">ll n,ans,m,l;</span><br><span class="line"><span class="type">bool</span> here[<span class="number">505</span>];</span><br><span class="line"><span class="type">long</span> <span class="type">double</span> b[<span class="number">505</span>][<span class="number">505</span>],o=<span class="number">1.0</span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n=<span class="built_in">read</span>(),m=<span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;++j)</span><br><span class="line">			a[i].z[j]=<span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">		a[i].c=<span class="built_in">read</span>();</span><br><span class="line">	<span class="built_in">sort</span>(a+<span class="number">1</span>,a+<span class="number">1</span>+n);</span><br><span class="line">	<span class="built_in">ins</span>(a[<span class="number">1</span>]);</span><br><span class="line">	ans+=a[<span class="number">1</span>].c;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">check</span>(a[i]))</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		ans+=a[i].c;</span><br><span class="line">		<span class="built_in">ins</span>(a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;++i)</span><br><span class="line">		<span class="keyword">if</span> (here[i])</span><br><span class="line">			++l;</span><br><span class="line">	<span class="built_in">write</span>(l,<span class="string">&#x27; &#x27;</span>),<span class="built_in">write</span>(ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(equip x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;++i)</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">fabs</span>(x.z[i])&gt;eps)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (!here[i])</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">			<span class="type">long</span> <span class="type">double</span> tmp=x.z[i]/b[i][i];</span><br><span class="line">			x.z[i]=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j=i+<span class="number">1</span>;j&lt;=m;++j)</span><br><span class="line">				x.z[j]-=tmp*b[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ins</span><span class="params">(equip x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;++i)</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">fabs</span>(x.z[i])&gt;eps)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (!here[i])</span><br><span class="line">			&#123;</span><br><span class="line">				here[i]=<span class="number">1</span>;</span><br><span class="line">				<span class="keyword">for</span> (<span class="type">int</span> j=i;j&lt;=m;++j)</span><br><span class="line">					b[i][j]=x.z[j];</span><br><span class="line">				<span class="keyword">return</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="type">long</span> <span class="type">double</span> tmp=x.z[i]/b[i][i];</span><br><span class="line">			x.z[i]=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j=i+<span class="number">1</span>;j&lt;=m;++j)</span><br><span class="line">				x.z[j]-=tmp*b[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
 <p>拟阵的功能远不止这些，在 2018 年国家集训队论文中杨乾澜大神介绍了拟阵的一个更<del>牛马</del>牛逼的扩展：<strong>拟阵交</strong></p>
 <h2 id="3-拟阵交"><a href="#3-拟阵交" class="headerlink" title="3. 拟阵交"></a>3. 拟阵交</h2><p>假设有两个拟阵 $(M,S)$ 和 $(M,T)$，我们称它们的拟阵交为 $S \cap T$</p>
 <p>有些问题要求最优化的答案有多个性质，只看单独某个性质都可以转为拟阵最优化问题，凑一坨却不好做</p>
@@ -327,25 +322,25 @@
 <p>然鹅大部分这样的问题都不好做，原因在于：</p>
 <p><strong>拟阵交不一定是拟阵</strong></p>
 <p>更令人悲观的是，大于等于三个拟阵交问题是 NP-Hard 的，可以规约到哈密顿路径</p>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/dtsbz9rv.png?x-oss-process=image/resize,m_lfit,h_170,w_225"></p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/dtsbz9rv.png?x-oss-process=image/resize,m_lfit,h_170,w_225" alt=""></p>
 <p>虽然但是，两个拟阵的交是有多项式算法的（怎么这么像 2-SAT 呢），我们下面就来介绍：</p>
-<p>介绍一个新的图：**交换图 $G_{S,T}(I)$**，$I$ 为某个集合</p>
+<p>介绍一个新的图：<strong>交换图 $G_{S,T}(I)$</strong>，$I$ 为某个集合</p>
 <p>交换图是一个有向二分图，可以认为左部是 $I$ 中的元素对应的点，右部是 $\complement_M I$ </p>
 <p>这个图的点为 $M$ 中的元素</p>
 <p>我们需要一个新的布尔数组 $vis$，用于记录 $M$ 中的某个元素是否在左部</p>
 <p>我们现在进行连边：</p>
-<p>取出左部一个点 $x$ 和右部一个点 $y$，记将 $x$ 与 $y$ 对调后左部为 $I’$，也就是 $I’&#x3D;(I-{ x }) \cup { y }$</p>
+<p>取出左部一个点 $x$ 和右部一个点 $y$，记将 $x$ 与 $y$ 对调后左部为 $I’$，也就是 $I’=(I-\{ x \}) \cup \{ y \}$</p>
 <ul>
 <li><p>若 $I’ \in S$，连一条 $x$ 到 $y$ 的有向边，边权为 $(-1)^{vis_i}w_y$</p>
 </li>
 <li><p>若 $I’ \in T$，连一条 $y$ 到 $x$ 的有向边，边权为 $(-1)^{vis_i}w_x$</p>
 </li>
 </ul>
-<p>再来张图，我们令 $S&#x3D;{ {1,2},{1 },{ 2 },\emptyset }$，$T&#x3D;{ {2,3},{2 },{ 3 },\emptyset }$，$M &#x3D; {1,2,3}$，$I&#x3D;{ 1,2}$，交换图就是：</p>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/qtmu0j2f.png?x-oss-process=image/resize,m_lfit,h_170,w_225"></p>
+<p>再来张图，我们令 $S=\{ \{1,2\},\{1 \},\{ 2 \},\emptyset \}$，$T=\{ \{2,3\},\{2 \},\{ 3 \},\emptyset \}$，$M = \{1,2,3\}$，$I=\{ 1,2\}$，交换图就是：</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/qtmu0j2f.png?x-oss-process=image/resize,m_lfit,h_170,w_225" alt=""></p>
 <p>现在我们来求拟阵交，使用增广法：</p>
 <ol>
-<li><p>初始化 $I&#x3D; \emptyset$，并建立两个新结点 $s,t$</p>
+<li><p>初始化 $I= \emptyset$，并建立两个新结点 $s,t$</p>
 </li>
 <li><p>建立交换图 $G_{S,T}(I)$</p>
 </li>
@@ -359,7 +354,7 @@
 </li>
 <li><p>假如存在最短路，将这条最短路上的所有元素的 $vis_i$ 变成 $!vis_i$，然后回到操作 2 循环</p>
 </li>
-<li><p>假如不存在最短路，结束循环，$I$ 即为所有 $vis_i&#x3D;1$ 的元素（除了 $s,t$ 外）</p>
+<li><p>假如不存在最短路，结束循环，$I$ 即为所有 $vis_i=1$ 的元素（除了 $s,t$ 外）</p>
 </li>
 </ol>
 <p>好像复杂度不超过$O(|I|^2n)$？（毕竟我还在学习……）</p>
@@ -372,9 +367,9 @@
 <p>那么 $T$ 是什么呢？</p>
 <p>如果你想将前 $k$ 个点都满足限制当做 $T$，你就 gg 了</p>
 <p>考虑这样一个情况（度数限制为 $1$）：</p>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/z3feeqf6.png"></p>
-<p>这个情况中，$T$ 应该是 ${ {(1,2),(3,4)},{(1,2)},{(2,3)},{(3,4)},\emptyset }$</p>
-<p>${(2,3)}$ 不是最大的元素，但是没有比它恰好多一个元素的集合了，这根本不是拟阵，<del>那还写个屁</del></p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/z3feeqf6.png" alt=""></p>
+<p>这个情况中，$T$ 应该是 $\{ \{(1,2),(3,4)\},\{(1,2)\},\{(2,3)\},\{(3,4)\},\emptyset \}$</p>
+<p>$\{(2,3)\}$ 不是最大的元素，但是没有比它恰好多一个元素的集合了，这根本不是拟阵，<del>那还写个屁</del></p>
 <p>你要是想将每个度数限制单独搞一个拟阵，再求拟阵交，<del>你就是图灵奖得主，名垂千古</del></p>
 <p><del>dmy 少讲了拟阵交不是拟阵，结果被我胡了一个NP-Hard</del></p>
 <p>发现我们没法把前 $k$ 个点都满足限制当做拟阵，原因在于这些点之间的连边对度数限制的消耗与其他边对度数限制的消耗不同</p>
@@ -478,6 +473,12 @@
   
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
 

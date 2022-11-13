@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":"ture","version":"8.13.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="先%lzh和成七爷  竞个p，8题把我们吊着打 Day -114514学校通知除了高三全部滚回家，原来在学校打 CCPC 的设定破灭。 讨论半（yi）天（miao），决定再 CHX 家旁边开个房打比赛。 Day -1晚上疯狂打印模板，数论全家桶+花式平衡树+线代啥的全打了，整整 30 页。 考虑了一番决定再带上牛津和之前做的高数笔记，感觉已经无敌了！ 除了牛津一个都没用上，焯 Day 1 7:55">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CCPC广州站油鸡">
+<meta property="og:url" content="http://example.com/2022/11/13/CCPC%E5%B9%BF%E5%B7%9E%E7%AB%99%E6%B2%B9%E9%B8%A1/index.html">
+<meta property="og:site_name" content="一个有机物的博客">
+<meta property="og:description" content="先%lzh和成七爷  竞个p，8题把我们吊着打 Day -114514学校通知除了高三全部滚回家，原来在学校打 CCPC 的设定破灭。 讨论半（yi）天（miao），决定再 CHX 家旁边开个房打比赛。 Day -1晚上疯狂打印模板，数论全家桶+花式平衡树+线代啥的全打了，整整 30 页。 考虑了一番决定再带上牛津和之前做的高数笔记，感觉已经无敌了！ 除了牛津一个都没用上，焯 Day 1 7:55">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/qapwlrlz.png?x-oss-process=image/resize,m_lfit,h_170,w_225">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/0cc95oaj.png?x-oss-process=image/resize,m_lfit,h_170,w_225">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/yvbsa0rz.png?x-oss-process=image/resize,m_lfit,h_170,w_225">
+<meta property="article:published_time" content="2022-11-13T09:40:52.000Z">
+<meta property="article:modified_time" content="2022-11-13T11:26:36.544Z">
+<meta property="article:author" content="C6H14">
+<meta property="article:tag" content="游记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/image_hosting/qapwlrlz.png?x-oss-process=image/resize,m_lfit,h_170,w_225">
+
+
+<link rel="canonical" href="http://example.com/2022/11/13/CCPC%E5%B9%BF%E5%B7%9E%E7%AB%99%E6%B2%B9%E9%B8%A1/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/11/13/CCPC%E5%B9%BF%E5%B7%9E%E7%AB%99%E6%B2%B9%E9%B8%A1/","path":"2022/11/13/CCPC广州站油鸡/","title":"CCPC广州站油鸡"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>CCPC广州站油鸡 | 一个有机物的博客</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">一个有机物的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-114514"><span class="nav-number">1.</span> <span class="nav-text">Day -114514</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-1"><span class="nav-number">2.</span> <span class="nav-text">Day -1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-1-7-55-9-12"><span class="nav-number">3.</span> <span class="nav-text">Day 1 7:55-9:12</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-13-%E5%B0%81%E6%A6%9C"><span class="nav-number">4.</span> <span class="nav-text">9:13-封榜</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E6%A6%9C-%E7%BB%93%E6%9D%9F"><span class="nav-number">5.</span> <span class="nav-text">封榜-结束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%96%9C%E9%97%BB%E4%B9%90%E8%A7%81%E7%9A%84%E8%B5%9B%E5%90%8E%E7%8E%AF%E8%8A%82"><span class="nav-number">6.</span> <span class="nav-text">喜闻乐见的赛后环节</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">C6H14</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/13/CCPC%E5%B9%BF%E5%B7%9E%E7%AB%99%E6%B2%B9%E9%B8%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="C6H14">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一个有机物的博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="CCPC广州站油鸡 | 一个有机物的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CCPC广州站油鸡
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-11-13 17:40:52 / 修改时间：19:26:36" itemprop="dateCreated datePublished" datetime="2022-11-13T17:40:52+08:00">2022-11-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/%E6%AD%A3%E5%BC%8F%E8%B5%9B/" itemprop="url" rel="index"><span itemprop="name">正式赛</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>先%lzh和成七爷</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/qapwlrlz.png?x-oss-process=image/resize,m_lfit,h_170,w_225" alt=""></p>
+<p><del>竞个p，8题把我们吊着打</del></p>
+<h3 id="Day-114514"><a href="#Day-114514" class="headerlink" title="Day -114514"></a>Day -114514</h3><p>学校通知除了高三全部滚回家，原来在学校打 CCPC 的设定破灭。</p>
+<p>讨论半（yi）天（miao），决定再 CHX 家旁边开个房打比赛。</p>
+<h3 id="Day-1"><a href="#Day-1" class="headerlink" title="Day -1"></a>Day -1</h3><p>晚上疯狂打印模板，数论全家桶+花式平衡树+线代啥的全打了，整整 30 页。</p>
+<p>考虑了一番决定再带上牛津和之前做的高数笔记，感觉已经无敌了！</p>
+<p><del>除了牛津一个都没用上，焯</del></p>
+<h3 id="Day-1-7-55-9-12"><a href="#Day-1-7-55-9-12" class="headerlink" title="Day 1 7:55-9:12"></a>Day 1 7:55-9:12</h3><p>和 CHX、LSY 在酒店碰面，搞设备。</p>
+<p><del>为什么会有人打印火车头啊</del></p>
+<p>由于昨晚没人去热身赛，8 点开始搞设备搞到开赛5分钟还有一台电脑没进去，只好先开题。</p>
+<p>看完 M 发现不好做，倒序开 L，发现是个 sb 计数题，<del>霸气地</del>拿起队长只因一顿猛敲，调了一下就交了，WA。</p>
+<p>调完设备的两人也各自开题，直接把只因让给 CHX 打 E，自己在旁边边想边接着倒序开题，K 看上去很像个计算几何，果断让给 LSY，开 J。</p>
+<p>tnnd，酒店突然断网，全 tm 都要重连，又耗了20分钟，都过去 40 分钟了还没做出一题，感觉要寄。</p>
+<p>重连后 CHX 一顿操作猛如虎，一个提交 TLE，我也推出 J 的式子了，转图论感觉可以矩乘找规律，但手算六阶矩阵特征值还是太猛了些，决定回去看 L。</p>
+<p>CHX 加了火车头还是 WA，接着沉思，我上去 check L 代码，好家伙，n 顶满输出了 14 位数，没取模，调完准备交。</p>
+<p>打开 L 页面一看，woc 怎么有个线段树，CHX 的 E 交到 L 去了，6。</p>
+<p>跌跌撞撞的在开赛一小时后成功（个屁）地以 3 次罚时为代价过了两题。</p>
+<h3 id="9-13-封榜"><a href="#9-13-封榜" class="headerlink" title="9:13-封榜"></a>9:13-封榜</h3><p>趁他们两个在胡题，我去打矩乘板子准备万恶的打表。</p>
+<p>打一半 CHX 会 I 了，忍痛让出电脑，没表可打的我只好去开最怕的 C（顺便 %构造的神cp），而 LSY 看完 A 在胡 H。</p>
+<p>CHXnb，一遍过 I，他们开始胡 H，<del>而我还在打表</del>。</p>
+<p>胡了几分钟纳什博弈就秒了 H，再次割舍电脑回去手算 6 阶行列式，顺便接着开构造和 A。</p>
+<p>我讲完题意 LSY 才发现看错题了，把 i 个点看成第 i 个点，马上反应过来书写背包。</p>
+<p><del>人家都写了加粗提示 ntm 还能看错</del></p>
+<p>目前看来情况大好，4 题至少排名在前 30。</p>
+<p>在一片欢声笑语中我和 CHX 开始开 M。</p>
+<p>仔细一看数据范围，mmp $k \leqslant 18$，爆枚每个 digit dp？但是得进位。</p>
+<p>想了一下，个位进位不超过 81，这不梦幻岛宝珠吗，果断数位 dp，算错进位范围差点犯罪，幸好后面想起来，总算拿下第 5 题。</p>
+<p>此时初中队都在 3 题原地踏步，隔壁 cp 队以 5 题少罚时的战绩居于我们之上。</p>
+<h3 id="封榜-结束"><a href="#封榜-结束" class="headerlink" title="封榜-结束"></a>封榜-结束</h3><p>完事后去胡 C，CHX 得出结论：每个点到 n 的路径长度必定相等，it’s doable。</p>
+<p>想了一会发现可以先全部赋值 1，反拓扑序扫一遍，每个点 check 一下所有后驱，拿最大的去。</p>
+<p>胡给 A 题写挂的 LSY，都觉得调 A 不如开 C，结果一激动忘了说 dsu，LSY 打了一半才想起来，结果嫌麻烦打了个 dijk 转移，一交，喜提罚时。</p>
+<p>三个人都抛掉其他题，一起搞 C。先是改 SPFA，挂了，然后改回去调，出 hack，依旧过不去。</p>
+<p>LSY 想了半天，突然抬头说了一句：“要不我 A 开 int128 试？”</p>
+<p>我一脸麻痹，这 m 会卡 int128？但还是让他试试，结果过了？！</p>
+<p>接下来，监考员听到了长达半分钟的屏蔽词汇……</p>
+<p>CHX 最后绕回 dsu，重构代码，但没时间，最后 6 题喜提 26 名的好成绩。</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/0cc95oaj.png?x-oss-process=image/resize,m_lfit,h_170,w_225" alt=""></p>
+<p>而我 J 题的表，一直找不出规律……</p>
+<h3 id="喜闻乐见的赛后环节"><a href="#喜闻乐见的赛后环节" class="headerlink" title="喜闻乐见的赛后环节"></a>喜闻乐见的赛后环节</h3><p>赛后心心念念 J 的我直接问 J，但没人理我……</p>
+<p>经伟大的 pht 一点拨，发现 B 是个完全不会的 ds 题，C 的思路是对的，应该是调炸了。</p>
+<p>最后再放一个经典老番：</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/yvbsa0rz.png?x-oss-process=image/resize,m_lfit,h_170,w_225" alt=""></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag"># 游记</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/11/12/22%E5%B9%B4%E6%AD%A3%E7%9D%BF%E9%9B%86%E8%AE%AD/" rel="prev" title="22年正睿集训">
+                  <i class="fa fa-chevron-left"></i> 22年正睿集训
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">C6H14</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
